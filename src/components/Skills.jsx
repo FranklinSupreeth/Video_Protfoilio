@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 
 const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength, containerRef }) => {
@@ -77,17 +77,17 @@ const Skills = () => {
       ref={containerRef}
       className="bg-white pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
-      <div className="max-w-6xl mx-auto relative md:h-[1350px]">
+      <div className="max-w-6xl mx-auto relative lg:h-[1350px]">
         
         {/* Header Content */}
-        <div data-aos="fade-up" className="md:absolute top-10 left-0 md:w-[450px] z-20 mb-16 md:mb-0">
+        <div data-aos="fade-up" className="lg:absolute top-10 left-0 lg:w-[450px] z-20 mb-16 lg:mb-0">
           <div className="inline-block border border-gray-300 rounded-full px-5 py-1.5 text-sm text-gray-600 font-bold mb-8 shadow-sm bg-white">
             What I bring
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tight relative">
             Skills I use to build full-stack products
             {/* Hand-drawn arrow */}
-            <svg className="absolute -bottom-10 right-10 w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="hidden lg:block absolute -bottom-10 right-10 w-12 h-12 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" className="hidden" />
               <path d="M4 4 Q 10 10 15 15 M 15 15 L 10 15 M 15 15 L 15 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -99,7 +99,7 @@ const Skills = () => {
 
         {/* Desktop SVG Animated Dashed Line */}
         <svg 
-          className="hidden md:block absolute top-0 left-0 w-full h-[1350px] pointer-events-none z-0" 
+          className="hidden lg:block absolute top-0 left-0 w-full h-[1350px] pointer-events-none z-0" 
           viewBox="0 0 1000 1350" 
           preserveAspectRatio="none"
         >
@@ -135,9 +135,13 @@ const Skills = () => {
           />
         </svg>
 
-        {/* Mobile Animated Vertical Dashed Line */}
+        
+
+        {/* Cards Container */}
+        <div className="flex flex-col gap-8 lg:gap-12 items-center lg:block relative z-10 w-full pt-4 lg:pt-0 pb-12 lg:pb-0">
+          {/* Mobile Animated Vertical Dashed Line */}
         <svg 
-          className="md:hidden absolute top-0 left-[50%] -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
+          className="lg:hidden absolute top-0 left-[50%] -translate-x-1/2 w-4 h-[100%] pointer-events-none z-0" 
           viewBox="0 0 4 100" 
           preserveAspectRatio="none"
         >
@@ -169,15 +173,12 @@ const Skills = () => {
             vectorEffect="non-scaling-stroke"
           />
         </svg>
-
-        {/* Cards Container */}
-        <div className="flex flex-col gap-8 md:gap-12 items-center md:block relative z-10 w-full pt-4 md:pt-0 pb-12 md:pb-0">
           
           <TagCard 
             number="01"
             title="Frontend"
             text="React, Tailwind CSS, and modern animation tooling (GSAP, Three.js / React Three Fiber) for scroll-driven, interactive UIs."
-            className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
+            className="lg:absolute lg:top-[10px] lg:right-[5%] xl:right-[10%] rotate-2 lg:rotate-6"
             aosType="fade-left"
             aosDelay="100"
             pathLength={pathLength}
@@ -188,7 +189,7 @@ const Skills = () => {
             number="02"
             title="Backend"
             text="Building REST APIs and server-side logic with Flask and Django, including model-serving pipelines for ML-powered apps."
-            className="md:absolute md:top-[450px] md:left-[5%] lg:left-[10%] -rotate-2 md:-rotate-6"
+            className="lg:absolute lg:top-[450px] lg:left-[5%] xl:left-[10%] -rotate-2 lg:-rotate-6"
             aosType="fade-right"
             aosDelay="200"
             pathLength={pathLength}
@@ -199,7 +200,7 @@ const Skills = () => {
             number="03"
             title="Databases & Deployment"
             text="Designing schemas in MySQL and PostgreSQL, then shipping to production on Vercel, Render, Railway, and Netlify."
-            className="md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
+            className="lg:absolute lg:top-[700px] lg:right-[5%] xl:right-[15%] rotate-1 lg:rotate-3"
             aosType="fade-left"
             aosDelay="300"
             pathLength={pathLength}
@@ -210,7 +211,7 @@ const Skills = () => {
             number="04"
             title="Cybersecurity"
             text="Growing focus on application security — secure coding practices, credential handling, and vulnerability-aware development."
-            className="md:absolute md:top-[1050px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
+            className="lg:absolute lg:top-[1050px] lg:left-[15%] xl:left-[25%] -rotate-1 lg:-rotate-3"
             aosType="fade-right"
             aosDelay="400"
             pathLength={pathLength}
@@ -221,7 +222,7 @@ const Skills = () => {
           <div 
             data-aos="fade-in" 
             data-aos-delay="600"
-            className="hidden md:block absolute top-[1250px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
+            className="hidden lg:block absolute top-[1250px] left-[60%] font-['Caveat',cursive] text-3xl text-gray-600 rotate-6"
           >
             Always learning something new!
           </div>

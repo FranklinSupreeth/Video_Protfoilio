@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Drop your intro video in src/assets/hero-video/ named franklin-intro.mp4
@@ -7,7 +7,7 @@ import heroVideo from '../assets/hero-video/franklin-intro.mp4';
 const Hero = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -39,7 +39,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden bg-black">
+    <section id="home" className="relative w-full h-screen h-[100svh] min-h-[560px] overflow-hidden bg-black">
       {/* Background Video */}
       <video
         ref={videoRef}

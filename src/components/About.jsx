@@ -1,6 +1,4 @@
-import React from 'react';
-// Drop your photo in src/assets/about/ named franklin-profile.png
-import stackImage from '../assets/about/franklin-profile.png';
+import profileImage from '../assets/about/franklin-supreeth-pic.webp';
 import reactImage from '../assets/skills/react.svg';
 import flaskImage from '../assets/skills/flask.svg';
 import djangoImage from '../assets/skills/django.svg';
@@ -10,10 +8,10 @@ import mongoDBImage from '../assets/skills/MongoDB.svg';
 const About = () => {
   return (
     <section id="about" className="bg-[#ff2a2a] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
 
         {/* Left Side: ID Badge and Skills */}
-        <div className="flex flex-col items-center w-full md:w-[350px] shrink-0 mt-12 md:mt-0">
+        <div className="flex flex-col items-center w-full lg:w-[350px] shrink-0 mt-12 lg:mt-0">
 
           <div data-aos="drop-bounce" className="relative flex justify-center w-full">
             {/* Lanyard string */}
@@ -30,8 +28,8 @@ const About = () => {
               {/* Image Container */}
               <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 border-2 border-transparent">
                 <img
-                  src={stackImage}
-                  alt="Profile"
+                  src={profileImage}
+                  alt="Franklin Supreeth"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -41,27 +39,12 @@ const About = () => {
         </div>
 
         {/* Right Side: Info Content */}
-        <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-8 md:mt-0 relative z-20">
+        <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-8 lg:mt-0 relative z-20">
 
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Hello!</h2>
           <p className="text-lg font-bold mb-8 leading-relaxed max-w-3xl text-red-50">
             I'm <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Franklin Supreeth</span>, a full-stack developer based in Bengaluru, India, dedicated to crafting clean, functional, and highly scalable web applications — with a growing interest in cybersecurity.
           </p>
-
-          {/* Education Block */}
-          <div data-aos="fade-up" data-aos-delay="150" className="bg-black/20 border border-black/10 rounded-2xl p-6 mb-10 backdrop-blur-sm max-w-3xl">
-            <h3 className="text-black font-black text-xs tracking-[0.2em] uppercase mb-4">Education</h3>
-            <div className="flex flex-col gap-3">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <span className="text-white font-bold">Master of Computer Applications (MCA)</span>
-                <span className="text-red-100 text-sm font-semibold">Kristu Jayanti College, Bengaluru</span>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                <span className="text-white font-bold">Bachelor of Computer Applications (BCA)</span>
-                <span className="text-red-100 text-sm font-semibold">Seshadripuram Frist Grade College, Bengaluru</span>
-              </div>
-            </div>
-          </div>
 
           {/* Horizontal Skills Row (Transparent & Large) */}
           <div className="flex items-center flex-wrap gap-8 md:gap-10 mt-8">
